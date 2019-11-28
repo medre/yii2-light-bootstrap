@@ -1,13 +1,13 @@
 {
-    "name": "hosannahighertech/yii2-light-bootstrap",
+    "name": "medre/yii2-light-bootstrap-v2",
     "description": "Yii2 Extension for Free Bootstrap Admin Template by Tim Creative. More details at https://www.creative-tim.com/product/light-bootstrap-dashboard",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","Admin","Themes","Bootstrap"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Stefano Mtangoo",
-            "email": "mwinjilisti@gmail.com"
+            "name": "Erdem Medre",
+            "email": "info@medre.net"
         }
     ],
     "require": {

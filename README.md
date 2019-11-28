@@ -1,4 +1,4 @@
-Light Bootstrap Admin Template
+Light Bootstrap Admin Template v2
 ==============================
 Yii2 Extension for Free Bootstrap Admin Template by Tim Creative. More details at https://www.creative-tim.com/product/light-bootstrap-dashboard
 
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hosannahighertech/yii2-light-bootstrap "*"
+php composer.phar require --prefer-dist medre/yii2-light-bootstrap-v2 "*"
 ```
 
 or add
 
 ```
-"hosannahighertech/yii2-light-bootstrap": "*"
+"medre/yii2-light-bootstrap-v2": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -54,13 +54,12 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-
 <div class="wrapper">
 
-    <?= \hosannahighertech\lbootstrap\widgets\SideBar::widget([
+    <?= \medre\lbootstrap\widgets\SideBar::widget([
         'bgImage'=>'@web/img/sidebar-5.jpg', //Don't define it if there is none
         'header'=>[
-            'title'=>'Hosanna is Great!',
+            'title'=>'Sidebar Title',
             'url'=>['/default/index']
         ],
         'links'=>[
@@ -69,54 +68,34 @@ AppAsset::register($this);
     ]) ?>
     
     <div class="main-panel">
-		 <?= \hosannahighertech\lbootstrap\widgets\NavBar::widget([
-				'theme'=>'red',
-				'brand'=>[
-					'label'=>'Nasafiri'
-				],
-				'links'=>[
-					['label' => 'Home', 'url' => ['/site/index']],
-					['label' => 'About', 'url' => ['/site/about']],
-				],
-			]) ?>
-                
-		<div class="content">
-			<div class="container-fluid">
-				<?= $content ?>
-			</div>
-		</div>
 
-        <footer class="footer">
+        <?= \medre\lbootstrap\widgets\NavBar::widget([
+            'theme'=>'default',
+            'brand'=>[
+                'label'=>'Menu'
+            ],
+            'links'=>[
+                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'About', 'url' => ['/site/about']],
+            ],
+		]) ?>
+                
+        <div class="content">
             <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                               Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy; <?= date('Y') ?> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+                <?= $content ?>
             </div>
-        </footer>
+        </div>
+
+        <?= medre\lbootstrap\widgets\Footer::widget(
+            [
+                'links' => [
+                    ['label'=>'Home', 'url'=>'/', 'options'=>['target'=>'_blank']],
+                    ['label'=>'Creative Tim', 'url'=>'http://www.creative-tim.com', 'options'=>['target'=>'_blank']],
+                    ['label'=>'Medre', 'url'=>'http://www.medre.net', 'options'=>['target'=>'_blank']]
+                 ],
+                 'footer' => '&copy;'.date('Y').' <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web'
+            ]
+        ) ?>
 
     </div>
 </div>
@@ -127,7 +106,3 @@ AppAsset::register($this);
 <?php $this->endPage() ?>
 
 ```
-
-###To-Do-List
-1. Convert footer to a widget
-2. Convert Panel to Container widget with sidebar, navbar and, content and footer as attributes.
