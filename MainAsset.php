@@ -1,6 +1,6 @@
 <?php
 
-namespace hosannahighertech\lbootstrap;
+namespace medre\lbootstrap;
 
 use yii\web\AssetBundle;
 

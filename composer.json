@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "hosannahighertech\\lbootstrap\\": ""
+            "medre\\lbootstrap\\": ""
         }
     }
 }

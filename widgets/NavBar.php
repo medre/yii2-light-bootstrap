@@ -9,14 +9,14 @@
  * Legal details.
 */
 
-namespace hosannahighertech\lbootstrap\widgets;
+namespace medre\lbootstrap\widgets;
 
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\base\InvalidParamException;
-use hosannahighertech\lbootstrap\MainAsset;
+use medre\lbootstrap\MainAsset;
 /**
  * This is just an example.
  */
